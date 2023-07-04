@@ -3,6 +3,7 @@ package com.example.fragmentdinamic;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -64,7 +65,11 @@ public class SecondFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentSecondBinding.inflate(getLayoutInflater(), container, false);
-        binding.buttonFinalizar.setOnClickListener(v -> {});
+        binding.buttonFinalizar.setOnClickListener (v -> {
+            FragmentManager fm = getActivity().getSupportFragmentManager();
+                    fm.popBackStack();
+                });
+
        binding.webSite.loadUrl(mParam1);
         return  binding.getRoot();
     }
