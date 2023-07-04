@@ -69,7 +69,7 @@ public class FirstFragment extends Fragment {
         binding.buttonVerWeb.setOnClickListener(v -> {
             String URL= binding.editTextWeb.getText().toString();
 
-            getActivity().getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainerView,
+            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView,
                     SecondFragment.newInstance(URL, ""),
                     "").commit();
 

@@ -65,7 +65,7 @@ public class SecondFragment extends Fragment {
         // Inflate the layout for this fragment
         binding = FragmentSecondBinding.inflate(getLayoutInflater(), container, false);
         binding.buttonFinalizar.setOnClickListener(v -> {});
-
+       binding.webSite.loadUrl(mParam1);
         return  binding.getRoot();
     }
 }

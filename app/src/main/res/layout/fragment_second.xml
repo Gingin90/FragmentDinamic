@@ -20,6 +20,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <WebView
+        android:id="@+id/webSite"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="25dp"
